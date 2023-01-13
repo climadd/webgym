@@ -1,0 +1,219 @@
+* {
+	box-sizing:border-box;
+}
+
+/* ----------------------------------------------------TITOLO E BARRA NAVIGAZIONE-----------*/
+
+/* titolo */
+h1 {
+    font-family: 'roboto slab', serif;
+    font-size: 45px;
+    color: white;
+}
+
+h2 {
+	text-align: center;
+}
+
+/*Posizione titolo*/
+.page_title {
+    position: absolute;
+    top: 13%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 100%
+    background-color:#00579c;    
+}
+
+.container_title {
+    position: absolute;
+}
+
+.nav_bar {
+	font-family: 'Open Sans', sans-serif; /* MEGLIO USARE SANS-SERIF */
+	font-size: 20px;
+	text-align: right;
+	padding: 16px;
+	background-color:#00579c; 
+
+}
+
+.nav_bar a {
+	color: white;
+	text-decoration:none;
+	padding: 16px;
+}
+
+.nav_bar a:hover {
+	background-color:#003d6e; 
+}
+
+.nav_bar .icon {
+  display: none;
+  padding:0;
+  margin-top: -4px;
+
+}
+/* Barra di navigazione scompare, rimane solo icona */
+@media screen and (max-width: 970px) {/* L'azione avviene arrivati a tale dimensione */
+  .nav_bar a:not(:first-child) {display: none;}/* la barra non si vede(devo cliccare)| Spazio tra elementi */
+  .nav_bar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* La classe "responsive" viene aggiunta al topnav con JavaScript 
+quando l'utente fa clic sull'icona (visualizza i collegamenti verticalmente 
+anziché orizzontalmente)
+*/
+@media screen and (max-width: 970px) {
+  .nav_bar.responsive {position: relative; }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav_bar.responsive a {/* elementi barra*/
+    float: none;
+    display: block;/* Visualizza elementi barra */
+    text-align: left;
+  }
+}
+
+
+/* ---------------------------------------------------------------- CORPO ----------------- */
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  text-align: justify;
+}
+/* stile del container del modulo */
+.container{
+  border-radius: 5px;
+  background-color:#e6e6e6;
+  padding: 15px;
+  width: 100%;
+}
+/* dimensioni e posizionamento modulo contatti */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 10px; 
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-top: 6px; 
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+.youtube{
+  width: 100%;
+}
+/*posizione paragrafi e icona download*/
+.p00, .p01, .p02{   /*rinominati per distinguerli da paragrafo download e paragrafo nel footer*/
+  width:100%;
+  text-decoration:none;
+}
+.p03{
+  
+}
+.icon_pdf{
+  position:relative;
+  right:23px;
+
+}
+/*margine lista*/
+ul{
+  margin-left: 70px;
+}
+
+
+.row {
+    margin: 0px -16px;
+    margin-bottom: 15px;
+}
+
+/* aggiunngi padding tra ogni '.column' */
+.row,
+.row > .column {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+
+}
+
+/* 50%=2 colonne  */
+.column {
+    width: 50%;
+    float:left;
+}
+
+
+.row:after {
+    content: "";/* "cancella il float" e lascia uno spazio tra gli elementi */
+    display: table;/* Lascia che l'elemento si comporti come un elemento <table> */
+    clear: both;/* Nessun elemento consentito sul lato sinistro o destro */
+}
+
+
+
+/* ------------------------------------------------------------------------------------------ FOOTER ------- */
+
+.footer_whole{
+  margin:auto;
+  padding:10px;
+  max-width:1000px;
+}
+/* impostazioni di testo "INFORMAZIONI" in footer */
+h4{
+  text-align:center;
+}
+/* impostazioni footer_index*/
+.footer_index{
+  text-align: center;
+}
+/* stile testo elementi in footer_index */
+.footer_index a{
+  color: black;
+  text-decoration: none;
+
+}
+/* stile testo footer */
+p.footer-page{
+  text-align: center;
+}
+
+.footer_content {
+  text-align: center;
+}
+
+.footer_content a {
+
+}
+
+/* impostazioni per icone FONT AWESOME social in footer */
+.fa {
+  padding: 15px;
+  margin-top: 4px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}

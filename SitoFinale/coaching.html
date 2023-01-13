@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>GymGym</title>
+
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/style_coaching.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+
+	<link rel="icon" href="resources/icon.png"> </link>
+
+	<script src="js/lightbox_gallery.js"></script> <!--richiamo funzione galleria-->
+
+	<script src="js/responsive_navbar.js"></script> <!--richiamo funzione navbar-->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<header>
+	<!--immagine simbolo sito-->
+	<div class="container_title">
+		<img src="resources/logo.png" alt="logo" width="200" height="200">
+		<div class="page_title"><h1>GymGym</h1></div>
+	</div>
+	<!--barra di navigazione-->
+	<div class="nav_bar" id="myTopnav">
+		<a href="home.html">HOME</a>
+		<a href="coaching.html">COACHING</a>
+		<a href="schedule.html">SCHEDULE & LOCATION</a>
+		<a href="contacts.html">CONTACTS</a>
+
+		<!--Richiamo a funzione javascript per la Navigation Bar responsiva-->
+
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+	</div>
+
+</header>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+
+<br>
+<br>
+
+<body>
+
+	<h2>I Nostri Allenatori</h2>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="column">
+				<img src="resources/coach00.jpg" style="width: 100%" onclick="openModal();currentSlide(1)" class="cursor">
+			</div>
+
+			<div class="column">
+				<img src="resources/coach01.jpg" style="width: 100%" onclick="openModal();currentSlide(2)" class="cursor">
+			</div>
+
+			<div class="column">
+				<img src="resources/coach02.jpg" style="width: 100%" onclick="openModal();currentSlide(3)" class="cursor">
+			</div>
+
+			<div class="column">
+				<img src="resources/coach03.jpg" style="width: 100%" onclick="openModal();currentSlide(4)" class="cursor">
+			</div>
+
+			<div class="column">
+				<img src="resources/coach04.jpg" style="width: 100%" onclick="openModal();currentSlide(5)" class="cursor">
+			</div>
+
+			<div class="column">
+				<img src="resources/coach05.jpg" style="width: 100%" onclick="openModal();currentSlide(6)" class="cursor">
+			</div>
+
+			<div class="column">
+				<img src="resources/coach06.jpg" style="width: 100%" onclick="openModal();currentSlide(7)" class="cursor">
+			</div>
+
+			<div class="column">
+				<img src="resources/coach07.jpg" style="width: 100%" onclick="openModal();currentSlide(8)" class="cursor">
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Modal/Lightbox di default nascosto -->
+
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+
+			<div class="mySlides">
+				<div class="numbertext">1/8</div>
+				<img class="text_img" src="resources/coach00.jpg" style="width: 100%" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">2/8</div>
+				<img class="text_img" src="resources/coach01.jpg" style="width: 100%" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">3/8</div>
+				<img class="text_img" src="resources/coach02.jpg" style="width: 100%" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">4/8</div>
+				<img class="text_img" src="resources/coach03.jpg" style="width: 100%" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">5/8</div>
+				<img class="text_img" src="resources/coach04.jpg" style="width: 100%" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">6/8</div>
+				<img class="text_img" src="resources/coach05.jpg" style="width: 100%" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">7/8</div>
+				<img class="text_img" src="resources/coach06.jpg" style="width: 100%" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">8/8</div>
+				<img class="text_img" src="resources/coach07.jpg" style="width: 100%" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
+			</div>
+
+			<!-- Controlli avanti/indietro -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<!-- didascalia -->
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+		</div>
+	</div>
+
+	<h2>Paragrafo</h2>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+	<hr>
+
+	<!-- footer -->
+
+	<footer class="footer_whole">
+
+		<div class="footer_index">
+			<a href="home.html">home</a>
+			<a href="coaching.html">&bull; coaching</a>
+			<a href="schedule.html">&bull; schedule&locations</a>
+			<a href="contacts.html">&bull; contacts</a>
+		</div>
+
+		<h4>Informazioni</h4>
+
+		<div class="footer_content">
+			<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+			<a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+			<a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+		</div>
+		<address>
+			<p class="footer-page"> &copy;2018 GymGym, Inc. All rights reserved.</p>
+			<p class="footer-page"> Lorenzo  Bertoldo</p>
+		</address>
+
+	</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+/* le dimensioni si applicano a tutte le parti del documento */
+* {
+	box-sizing:border-box;
+}
+
+/* ----------------------------------------------TITOLO E BARRA NAVIGAZIONE-----------*/
+/* titolo */
+h1 {
+    font-family: 'roboto slab', serif;
+    font-size: 45px;
+    color: white;
+}
+h2 {
+	text-align: center;
+}
+/*Posizione titolo*/
+.page_title {
+    position: absolute;
+    top: 13%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 100%
+    background-color:#00579c;    
+}
+
+.container_title {
+    position: absolute;
+}
+
+.nav_bar {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	text-align: right;
+	padding: 16px;
+	background-color:#00579c; 
+
+}
+
+.nav_bar a {
+	color: white;
+	text-decoration:none;
+	padding: 16px;
+}
+
+.nav_bar a:hover {
+	background-color:#003d6e; 
+}
+
+.nav_bar .icon {
+  display: none;
+  padding:0;
+  margin-top: -4px;
+
+}
+/* Barra di navigazione scompare, rimane solo icona */
+@media screen and (max-width: 970px) {/* succede solo arrivati a questa dimensione */
+  .nav_bar a:not(:first-child) {display: none;}/* la barra non si vede(devo cliccare)| Spazio tra elementi */
+  .nav_bar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* La classe "responsive" viene aggiunta al topnav con JavaScript 
+quando l'utente fa clic sull'icona (visualizza i collegamenti verticalmente 
+anziché orizzontalmente)
+*/
+@media screen and (max-width: 970px) {
+  .nav_bar.responsive {position: relative; }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav_bar.responsive a {/* elementi barra*/
+    float: none;
+    display: block;/* Visualizza elementi barra */
+    text-align: left;
+  }
+}
+
+/* ------------------------------------------------------FINE TITOLO E BARRA NAVIGAZIONE-----------*/
+/* corpo del documento */
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif; /* MEGLIO USARE SANS-SERIF */
+}
+
+p {
+  text-align: justify;
+}
+
+/* ------------------------------------------------------------------------ SLIDESHOW ------- */
+.container {
+  background-color: #00579c;
+  padding: 15px; 
+  border-radius: 10px;
+  margin:auto;
+  max-width: 1100px;/*dimensione contorno colorato*/
+}
+
+/* contenitore slideshow */
+.slideshow-container {
+  max-width: 1100px;/*dimensione immagine*/
+  position: relative;
+}
+
+/* nasondi le immagini di default */
+.mySlides{
+    display: none;
+}
+
+/* botton avanti/indietro */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;/*ease = specifica un effetto di transizione con avvio lento, quindi veloce, quindi termina lentamente (impostazione predefinita)*/
+  border-radius: 0 3px 3px 0;
+}
+
+/* Posiziona il pulsante "avanti" a destra */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* didascalia */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* "contatore" (1/4 ecc...) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* indicatori rotondi */
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/*stando su un immagine il dot cambia colore evidenziando a che punto siamo*/
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Animazione in dissolvenza */
+.fade {
+  -webkit-animation-name: fade;/* cambia a seconda del browser (-webkit per Chrome, Safari; -moz per Firefox, -o per Opera...)*/
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/*attua il passaggio da una opacità all'altra*/
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*come sopra*/
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* ------------------------------------------------------------------------ FOOTER ------- */
+.footer_whole{
+  margin:auto;
+  padding:10px;
+  max-width:1000px;
+}
+/* impostazioni di testo "INFORMAZIONI" in footer */
+h4{
+  text-align:center;
+}
+/* impostazioni footer_index*/
+.footer_index{
+  text-align: center;
+}
+/* stile testo elementi in footer_index */
+.footer_index a{
+  color: black;
+  text-decoration: none;
+
+}
+/* stile testo footer */
+p.footer-page{
+  text-align: center;
+}
+
+.footer_content {
+  text-align: center;
+}
+
+.footer_content a {
+
+}
+
+/* impostazioni per icone FONT AWESOME social in footer */
+.fa {
+  padding: 15px;
+  margin-top: 4px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
