@@ -1,5 +1,6 @@
 <?php
-require 'db.php';
+require_once 'db.php';
+global $pdo;
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = isset($_POST['name']) ? $_POST['name'] : '';

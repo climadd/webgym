@@ -1,16 +1,14 @@
 <?php
+$host = 'localhost';  // XAMPP default
+$dbname = 'gym_db';  // has to match database name on .sql file
+$username = 'root';  // XAMPP default (no password)
+$password = '';  // XAMPP default (leave empty)
 
-$host = "localhost";
-$dbname = "gym_website";
-$username = "root";         //mySQL user
-$password = "";
-
-try{
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e){
-    die("Connection failed: " . $e->getMessage());
-    }
-
+try {
+    $connect = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("❌ Database connection failed: " . $e->getMessage());
+}
 ?>
 

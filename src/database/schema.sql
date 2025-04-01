@@ -1,6 +1,6 @@
-CREATE DATABASE gym_website;
+CREATE DATABASE gym_db;
 
-USE gym_website;
+USE gym_db;
 
 CREATE TABLE contact_messages (
     id INT AUTO_INCREMENT PRIMARY KEY,
