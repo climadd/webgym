@@ -1,26 +1,33 @@
 <?php
 require_once 'db.php';
-global $pdo;
+global $connect;
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = isset($_POST['name']) ? $_POST['name'] : '';
-    $surname = isset($_POST['surname']) ? $_POST['surname'] : '';
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-    $message = isset($_POST['message']) ? $_POST['message'] : '';
+    $name = htmlspecialchars(trim($_POST['name'] ?? ''));
+    $surname = htmlspecialchars(trim($_POST['surname'] ?? ''));
+    $email = htmlspecialchars(trim($_POST['email'] ?? ''));
+    $message = htmlspecialchars(trim(['message'] ?? ''));
 
-    if (!empty($name) && !empty($surname) && !empty($email) && !empty($message)) {
-        $stmt = $pdo->prepare("INSERT INTO contact_messages (name,surname, email, message) VALUES (?, ?, ?, ?)");
-        $stmt->execute([$name, $surname, $email, $message]);
+    try {
+        $stmt = $connect->prepare("
+            INSERT INTO contact_messages (name, surname, email, message)
+            VALUES (:name, :surname, :email, :message)
+        ");
+        $stmt->execute([
+            ':name' => $name,
+            ':surname' => $surname,
+            ':email' => $email,
+            ':message' => $message
+        ]);
+        echo json_encode(['success' => true, 'message' => 'Message sent!']);
 
-        echo json_encode(['success' => true, "message" => "Message sent!"]);
+    } catch (PDOException $e) {
+        echo json_encode(['success' => false, 'message' => 'Database error: ' . $e->getMessage()]);
     }
-    else {
-        echo json_encode(['success' => false, "message" => "Please fill every field!"]);
-    }
+
+} else {
+    echo json_encode(['success' => false, 'message' => 'Please fill in all required fields.']);
 }
-else {
-        echo json_encode(['success' => false, "message" => "Invalid request!"]);
-    }
 
 ?>
 
