@@ -6,7 +6,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars(trim($_POST['firstname'] ?? ''));
     $surname = htmlspecialchars(trim($_POST['lastname'] ?? ''));
     $email = htmlspecialchars(trim($_POST['email'] ?? ''));
-    $message = htmlspecialchars(trim(['subject'] ?? ''));
+    $message = htmlspecialchars(trim($_POST['subject'] ?? ''));
 
     try {
         $stmt = $connect->prepare("
