@@ -60,21 +60,24 @@
 
 	     	<!-- modulo contatti -->
 					<div class="container">
-						<form>
+						<form method="POST" action="../backend/contact.php">
 							<label for="fname">First Name</label>
-							<input type="text" id="fname" name="firstname" placeholder="Il tuo nome...">
+							<input type="text" id="fname" name="firstname" placeholder="Il tuo nome..." required />
 
 							<label for="lname">Last Name</label>
-							<input type="text" id="lname" name="lastname" placeholder="Il tuo cognome...">
+							<input type="text" id="lname" name="lastname" placeholder="Il tuo cognome..." required />
 
 							<label for="mail">Email</label>
-							<input type="text" id="mail" name="email" placeholder="Il tuo indirizzo di posta elettronica...">
+							<input type="text" id="mail" name="email" placeholder="Il tuo indirizzo di posta elettronica..." required />
 
 							<label for="subject">Subject</label>
-							<textarea id="subject" name="subject" placeholder="Cosa ci vuoi chiedere? " style="height: 200px"></textarea>
+							<textarea id="subject" name="subject" placeholder="Cosa ci vuoi chiedere? " style="height: 200px" required></textarea>
 
 							<input type="submit" value="Submit">
 						</form>
+
+						<!-- This div will display the result. todo Implement it with either js or Ajax -->
+						<div id="formResult"></div>
 					</div>
 				</div>
 			</div>

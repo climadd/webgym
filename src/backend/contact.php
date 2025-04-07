@@ -3,10 +3,10 @@ require_once 'db.php';
 global $connect;
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars(trim($_POST['name'] ?? ''));
-    $surname = htmlspecialchars(trim($_POST['surname'] ?? ''));
+    $name = htmlspecialchars(trim($_POST['firstname'] ?? ''));
+    $surname = htmlspecialchars(trim($_POST['lastname'] ?? ''));
     $email = htmlspecialchars(trim($_POST['email'] ?? ''));
-    $message = htmlspecialchars(trim(['message'] ?? ''));
+    $message = htmlspecialchars(trim(['subject'] ?? ''));
 
     try {
         $stmt = $connect->prepare("
