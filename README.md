@@ -1,6 +1,6 @@
 <sup>Lorenzo Mirto Bertoldo @climadd</sup>
 
-# 🏋️ Local Gym Business Website
+# Local Gym Business Website
 
 A practical, fully responsive website developed for a local gym business.  
 The project provides essential business information, enhances customer engagement, and establishes a strong digital presence.
@@ -25,7 +25,7 @@ A key feature of the system is its backend integration. When users submit conten
 
 ## 🌐 Website Structure
 
-### 🏠 Homepage
+### Homepage
 
 The homepage introduces the gym’s identity and branding. It includes:
 
@@ -34,11 +34,11 @@ The homepage introduces the gym’s identity and branding. It includes:
 - A clean overview section presenting the gym  
 - A structured footer with essential links and contact information  
 
-### 🏋️ Coaching Page
+### Coaching Page
 
 The Coaching page presents detailed information about trainers and services offered. It highlights coaching specialties and provides visitors with a clear understanding of the gym’s professional expertise.
 
-### 🗓 Schedule & Location Page
+### Schedule & Location Page
 
 This section provides practical information for clients, including:
 
@@ -48,7 +48,7 @@ This section provides practical information for clients, including:
 
 The layout ensures information is easy to scan and accessible across all devices.
 
-### 📩 Contact Page
+### Contact Page
 
 The Contact page features a functional inquiry form that includes:
 
